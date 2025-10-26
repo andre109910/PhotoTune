@@ -8,12 +8,12 @@ export function Testimonials() {
           Pessoas que confiaram no nosso trabalho
         </h2>
         <div className="mt-8 w-full max-w-4xl mx-auto">
-            <div className="relative aspect-[2/1] w-full overflow-hidden rounded-md">
+            <div className="relative aspect-[2/1] w-full overflow-hidden">
                 <Image
                     src="https://i.imgur.com/bwR3Lg5.jpeg"
                     alt="Depoimentos de clientes satisfeitos"
                     fill
-                    className="object-contain rounded-md shadow-[0_0_15px_5px_rgba(0,191,255,0.4)]"
+                    className="object-contain rounded-md border-4 border-primary"
                 />
             </div>
         </div>
