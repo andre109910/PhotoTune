@@ -17,12 +17,12 @@ export function Hero() {
           Fotos ruins afastam clientes. O PhotoTune usa IA para transformar imagens sem graça em fotos profissionais, vibrantes e irresistíveis — prontas para atrair olhares e <span className="text-primary font-semibold">aumentar suas vendas!</span>
         </p>
         <div className="mt-10">
-          <Button size="lg" className="h-14 rounded-full px-10 text-lg font-bold">
+          <Button size="lg" className="h-auto rounded-full px-8 py-3 text-base font-bold sm:h-14 sm:px-10 sm:text-lg">
             <WandSparkles className="mr-2 h-5 w-5" />
             Quero transformar minhas fotos agora
           </Button>
         </div>
-        <div className="mt-8 flex justify-center items-center gap-4 text-sm text-muted-foreground sm:gap-8">
+        <div className="mt-8 flex flex-col items-center justify-center gap-4 text-sm text-muted-foreground sm:flex-row sm:gap-8">
             <div className="flex items-center gap-2">
                 <CheckCircle2 className="h-4 w-4 text-green-500" />
                 <span>Resultados em minutos</span>

@@ -11,7 +11,7 @@ export function FinalCta() {
           🧠 Em minutos, você vai ver como uma boa imagem muda tudo.
         </p>
         <div className="mt-10">
-          <Button size="lg" className="h-16 rounded-xl px-12 text-xl font-bold transform transition-transform duration-300 hover:scale-105">
+          <Button size="lg" className="h-auto rounded-xl px-6 py-4 text-lg font-bold transform transition-transform duration-300 hover:scale-105 sm:h-16 sm:px-12 sm:text-xl">
             Quero transformar minhas fotos com IA agora
           </Button>
         </div>
