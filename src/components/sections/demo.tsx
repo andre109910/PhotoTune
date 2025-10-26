@@ -1,12 +1,5 @@
 import { BeforeAfterSlider } from "@/components/before-after-slider";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel"
 import { Card, CardContent } from "../ui/card";
 
 export function Demo() {
@@ -35,7 +28,7 @@ export function Demo() {
           📷 Arraste o controle abaixo e veja a transformação acontecer 👇
         </p>
 
-        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-8 grid grid-cols-1 gap-8">
             {sliders.map((slide, index) => (
                 slide.before && slide.after && (
                 <Card key={index} className="overflow-hidden">
