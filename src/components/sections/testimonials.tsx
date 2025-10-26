@@ -7,7 +7,7 @@ export function Testimonials() {
         <h2 className="font-headline text-3xl font-bold text-title-blue md:text-4xl">
           Pessoas que confiaram no nosso trabalho
         </h2>
-        <div className="mt-8 relative w-full aspect-[2/1] max-w-4xl mx-auto">
+        <div className="mt-8 relative w-full aspect-[2/1] max-w-4xl mx-auto rounded-xl overflow-hidden border-4 border-white shadow-2xl">
           <Image
             src="https://i.imgur.com/bwR3Lg5.jpeg"
             alt="Depoimentos de clientes satisfeitos"
