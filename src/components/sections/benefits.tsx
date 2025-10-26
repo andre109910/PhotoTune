@@ -9,7 +9,7 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <section id="benefits" className="bg-gray-50/50 py-20 sm:py-24">
+    <section id="benefits" className="bg-transparent py-20 sm:py-24">
       <div className="container mx-auto max-w-[900px] px-4">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
           {benefits.map((benefit, index) => (

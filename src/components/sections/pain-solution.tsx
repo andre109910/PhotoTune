@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export function PainSolution() {
   return (
-    <section id="solution" className="bg-gray-50/50 py-20 sm:py-24 overflow-x-hidden">
+    <section id="solution" className="bg-transparent py-20 sm:py-24 overflow-x-hidden">
       <div className="container mx-auto max-w-[900px] px-4">
         <div className="grid gap-12 md:grid-cols-2 md:gap-16">
           <div className="space-y-6">

@@ -16,6 +16,8 @@ export default {
       },
       colors: {
         'title-blue': '#002244',
+        'blue-50': '#EFF6FF',
+        'blue-100': '#DBEAFE',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

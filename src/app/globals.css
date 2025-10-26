@@ -79,6 +79,12 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-gradient-to-b from-white to-blue-50 text-foreground;
+  }
+}
+
+@layer components {
+  .section-divider {
+    @apply h-20 w-full bg-gradient-to-b from-transparent to-blue-100/50;
   }
 }
