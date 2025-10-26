@@ -1,15 +1,15 @@
-import { Camera, Lightbulb, TrendingDown, Frown, XCircle, Smile, TrendingUp } from "lucide-react";
+import { Camera, Lightbulb, TrendingDown, Frown, XCircle, Smile, TrendingUp, Palette, Sun } from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
 const problems = [
     {
-      icon: (props: any) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"/></svg>,
+      icon: Palette,
       text: "As cores parecem mortas...",
       iconClass: "text-red-500",
     },
     {
-      icon: (props: any) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 12H5.5a8.5 8.5 0 1 0 8.28-11.42"/><path d="m15.5 6-3 3 3 3"/></svg>,
+      icon: Sun,
       text: "A iluminação não valoriza o produto...",
       iconClass: "text-orange-500",
     },
