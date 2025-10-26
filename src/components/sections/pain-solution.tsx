@@ -43,26 +43,6 @@ export function PainSolution() {
             </Card>
           ))}
         </div>
-
-        <div className="mt-16 text-center">
-          <h3 className="font-headline text-3xl font-bold text-title-blue md:text-4xl">
-            Um estudo da Universidade de Oxford mostra que as pessoas <span className="text-primary">“comem com os olhos”</span>
-          </h3>
-        </div>
-        
-        <div className="mt-8">
-            <div className="relative aspect-video w-full max-w-3xl mx-auto shadow-2xl rounded-2xl overflow-hidden">
-                <Image src="https://i.imgur.com/qBMEdZ6.png" alt="Estatísticas de marketing visual" fill className="object-contain" />
-            </div>
-        </div>
-
-        <div className="mt-8">
-            <div className="bg-blue-100/60 border-l-4 border-blue-500 p-6 rounded-lg">
-                <p className="text-lg text-blue-900 italic text-center">
-                  ...ou seja, a aparência do seu prato <strong className="font-semibold">influencia diretamente</strong> na decisão de compra.
-                </p>
-            </div>
-        </div>
         
         <div className="mt-16 bg-gradient-to-b from-blue-50 to-white p-8 rounded-2xl text-center">
             <div className="flex items-center justify-center gap-4 mb-4">
