@@ -44,18 +44,19 @@ export function PainSolution() {
           ))}
         </div>
 
-        <div className="mt-12">
-            <div className="relative aspect-video w-full max-w-3xl mx-auto shadow-2xl rounded-2xl overflow-hidden">
-                <Image src="https://i.imgur.com/qBMEdZ6.png" alt="Estatísticas de marketing visual" fill className="object-contain" />
-            </div>
-        </div>
-
         <div className="mt-16 text-center">
           <h3 className="font-headline text-2xl font-bold text-title-blue">
             Um estudo da Universidade de Oxford mostra que as pessoas <span className="text-primary">“comem com os olhos”</span>
           </h3>
         </div>
-        <div className="mt-4">
+        
+        <div className="mt-8">
+            <div className="relative aspect-video w-full max-w-3xl mx-auto shadow-2xl rounded-2xl overflow-hidden">
+                <Image src="https://i.imgur.com/qBMEdZ6.png" alt="Estatísticas de marketing visual" fill className="object-contain" />
+            </div>
+        </div>
+
+        <div className="mt-8">
             <div className="border-l-4 border-primary bg-primary/10 p-6 rounded-r-lg">
                 <p className="text-lg text-foreground italic">
                   ...ou seja, a aparência do seu prato <strong className="font-semibold">influencia diretamente</strong> na decisão de compra.
