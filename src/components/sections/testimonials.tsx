@@ -13,7 +13,7 @@ export function Testimonials() {
                     src="https://i.imgur.com/bwR3Lg5.jpeg"
                     alt="Depoimentos de clientes satisfeitos"
                     fill
-                    className="object-contain rounded-md border-4 border-primary"
+                    className="object-contain rounded-md"
                 />
             </div>
         </div>
