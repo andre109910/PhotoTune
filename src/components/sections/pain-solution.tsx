@@ -43,24 +43,6 @@ export function PainSolution() {
             </Card>
           ))}
         </div>
-        
-        <div className="mt-16 bg-gradient-to-b from-blue-50 to-white p-8 rounded-2xl text-center">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
-                <Lightbulb className="h-6 w-6 text-primary" />
-              </div>
-              <h3 className="font-headline text-3xl font-bold text-title-blue">
-                E é aí que entra o PhotoTune.
-              </h3>
-            </div>
-            <p className="text-lg leading-relaxed text-foreground max-w-3xl mx-auto">
-              Com ele, você envia suas fotos “zoadaças” (sim, do jeito que estão!) e em poucos minutos recebe imagens otimizadas com IA — com cor, brilho, contraste e foco profissional.
-            </p>
-            <p className="text-lg leading-relaxed text-foreground max-w-3xl mx-auto mt-4">
-              Nada de fotógrafo caro ou programas complicados — o PhotoTune faz tudo automaticamente, com tecnologia de ponta.
-            </p>
-        </div>
-
       </div>
     </section>
   );
