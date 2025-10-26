@@ -57,9 +57,9 @@ export function PainSolution() {
         </div>
 
         <div className="mt-8">
-            <div className="border-l-4 border-primary bg-primary/10 p-6 rounded-r-lg">
-                <p className="text-lg text-foreground italic">
-                  ...ou seja, a aparência do seu prato <strong className="font-semibold">influencia diretamente</strong> na decisão de compra.
+            <div className="bg-gradient-to-br from-blue-500 to-blue-700 p-6 rounded-2xl shadow-lg">
+                <p className="text-lg text-white italic text-center">
+                  ...ou seja, a aparência do seu prato <strong className="font-bold">influencia diretamente</strong> na decisão de compra.
                 </p>
             </div>
         </div>
