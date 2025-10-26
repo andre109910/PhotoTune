@@ -6,9 +6,9 @@ export function Evidence() {
         <section id="evidence" className="bg-transparent py-20 sm:py-24">
             <div className="container mx-auto max-w-[900px] px-4">
                 <div className="text-center">
-                <h3 className="font-headline text-3xl font-bold text-title-blue md:text-4xl">
+                <h2 className="font-headline text-3xl font-bold text-title-blue md:text-4xl">
                     Um estudo da Universidade de Oxford mostra que as pessoas <span className="text-primary">“comem com os olhos”</span>
-                </h3>
+                </h2>
                 </div>
                 
                 <div className="mt-8">

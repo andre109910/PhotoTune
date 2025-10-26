@@ -66,7 +66,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-[900px] aspect-video mx-auto select-none overflow-hidden rounded-2xl shadow-2xl cursor-pointer"
+      className="relative w-full max-w-[900px] aspect-[4/3] mx-auto select-none overflow-hidden rounded-2xl shadow-2xl cursor-pointer"
       onClick={handleContainerClick}
     >
         <Image
