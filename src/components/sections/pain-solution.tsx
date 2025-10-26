@@ -24,12 +24,15 @@ export function PainSolution() {
                 <p><strong className="font-semibold">E o resultado? O cliente passa direto.</strong></p>
               </div>
             </div>
-             <div className="relative aspect-video w-full max-w-sm mx-auto">
-                 <Image src="https://i.imgur.com/qBMEdZ6.png" alt="Estatísticas de marketing visual" fill className="object-contain" />
+            <div className="rounded-lg border border-l-4 border-accent bg-accent/20 p-4 text-base text-foreground">
+              <h4 className="font-bold mb-2 text-center">Um estudo da Universidade de Oxford mostra que as pessoas "comem com os olhos"</h4>
+              <div className="relative aspect-video w-full max-w-sm mx-auto mb-4">
+                  <Image src="https://i.imgur.com/qBMEdZ6.png" alt="Estatísticas de marketing visual" fill className="object-contain" />
+              </div>
+              <p className="italic text-center">
+                ou seja, a aparência do seu prato influencia diretamente na decisão de compra.
+              </p>
             </div>
-            <p className="rounded-lg border border-l-4 border-accent bg-accent/20 p-4 text-base italic text-foreground">
-              Um estudo da Universidade de Oxford mostra que as pessoas “comem com os olhos” — ou seja, a aparência do seu prato influencia diretamente na decisão de compra.
-            </p>
           </div>
 
           <div className="space-y-6">

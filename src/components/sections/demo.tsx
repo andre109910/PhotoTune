@@ -7,6 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { Card, CardContent } from "../ui/card";
 
 export function Demo() {
   const sliders = [
@@ -20,7 +21,7 @@ export function Demo() {
     },
     {
       before: PlaceHolderImages.find(img => img.id === 'before-salad'),
-      after: PlaceHolderImages.find(img => img.id === 'after-salad'),
+      after: PlaceHolderImages.find(img => img.id === 'after-salad-2'),
     },
   ];
 
@@ -34,23 +35,19 @@ export function Demo() {
           📷 Arraste o controle abaixo e veja a transformação acontecer 👇
         </p>
 
-        <div className="mt-8">
-            <Carousel className="w-full max-w-4xl mx-auto" opts={{ loop: true }}>
-                <CarouselContent>
-                    {sliders.map((slide, index) => (
-                        slide.before && slide.after && (
-                        <CarouselItem key={index}>
-                            <BeforeAfterSlider
-                                beforeImage={slide.before}
-                                afterImage={slide.after}
-                            />
-                        </CarouselItem>
-                        )
-                    ))}
-                </CarouselContent>
-                <CarouselPrevious className="hidden sm:flex" />
-                <CarouselNext className="hidden sm:flex" />
-            </Carousel>
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+            {sliders.map((slide, index) => (
+                slide.before && slide.after && (
+                <Card key={index} className="overflow-hidden">
+                    <CardContent className="p-0">
+                        <BeforeAfterSlider
+                            beforeImage={slide.before}
+                            afterImage={slide.after}
+                        />
+                    </CardContent>
+                </Card>
+                )
+            ))}
         </div>
 
         <p className="mt-8 text-xl font-medium text-foreground">

@@ -35,6 +35,12 @@
       "description": "A vibrant, professionally lit photo of a salad.",
       "imageUrl": "https://i.imgur.com/UncqVvy.jpeg",
       "imageHint": "vibrant salad"
+    },
+    {
+      "id": "after-salad-2",
+      "description": "A vibrant, professionally lit photo of a salad, version 2.",
+      "imageUrl": "https://i.imgur.com/sde2hJ7.jpeg",
+      "imageHint": "vibrant salad"
     }
   ]
 }

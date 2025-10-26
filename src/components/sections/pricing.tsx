@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Camera, Lightbulb } from "lucide-react";
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Camera, Lightbulb, Star } from "lucide-react";
+import Link from 'next/link';
 
 const BurgerIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
@@ -52,6 +53,8 @@ const packages = [
     description: "Ideal pra testar o poder do PhotoTune",
     price: "14,90",
     buttonText: "Transformar minha foto agora",
+    href: "https://pay.cakto.com.br/yo9ptez",
+    popular: false,
   },
   {
     icon: BurgerIcon,
@@ -59,6 +62,8 @@ const packages = [
     description: "Perfeito pra deixar seu cardápio irresistível",
     price: "49,90",
     buttonText: "Quero transformar 5 fotos",
+    href: "https://pay.cakto.com.br/32au8fd",
+    popular: false,
   },
   {
     icon: PizzaIcon,
@@ -66,6 +71,8 @@ const packages = [
     description: "Transforme tudo e venda com impacto visual",
     price: "79,90",
     buttonText: "Melhorar minhas 10 fotos",
+    href: "https://pay.cakto.com.br/ivte3oq_622949",
+    popular: true,
   },
 ];
 
@@ -80,26 +87,34 @@ export function Pricing() {
         </div>
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-3">
           {packages.map((pkg, index) => (
-            <Card key={index} className="flex flex-col rounded-2xl shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl">
-              <CardHeader className="items-center text-center">
+            <Card key={index} className={`flex flex-col rounded-2xl shadow-lg transition-all hover:scale-[1.02] hover:shadow-xl ${pkg.popular ? 'border-primary border-2 relative' : ''}`}>
+              {pkg.popular && (
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-4 py-1 text-sm font-bold text-primary-foreground">
+                  <Star className="w-4 h-4 inline-block mr-1" />
+                  Mais Popular
+                </div>
+              )}
+              <CardHeader className="items-center text-center pt-8">
                 <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-4">
                   <pkg.icon className="h-8 w-8 text-primary" />
                 </div>
                 <CardTitle className="font-headline text-2xl font-bold text-title-blue">{pkg.title}</CardTitle>
+                <CardDescription className="flex items-center gap-2 text-muted-foreground">
+                    <Lightbulb className="h-4 w-4" />
+                    <span>{pkg.description}</span>
+                </CardDescription>
               </CardHeader>
               <CardContent className="flex flex-1 flex-col items-center text-center">
-                <div className="flex items-center gap-2 text-muted-foreground">
-                    <Lightbulb className="h-4 w-4" />
-                    <p>{pkg.description}</p>
-                </div>
                 <div className="my-8">
                   <span className="text-4xl font-bold">R$</span>
                   <span className="text-7xl font-bold tracking-tighter">{pkg.price.split(',')[0]}</span>
                   <span className="text-3xl font-bold text-muted-foreground">,{pkg.price.split(',')[1]}</span>
                 </div>
                 <div className="w-full mt-auto">
-                  <Button size="lg" className="w-full h-12 rounded-xl text-md font-bold">
-                    {pkg.buttonText}
+                  <Button size="lg" className="w-full h-12 rounded-xl text-md font-bold" asChild>
+                    <Link href={pkg.href} target="_blank">
+                      {pkg.buttonText}
+                    </Link>
                   </Button>
                 </div>
               </CardContent>

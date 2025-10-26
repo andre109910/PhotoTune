@@ -2,6 +2,7 @@ import { Hero } from "@/components/sections/hero";
 import { PainSolution } from "@/components/sections/pain-solution";
 import { Demo } from "@/components/sections/demo";
 import { Benefits } from "@/components/sections/benefits";
+import { Testimonials } from "@/components/sections/testimonials";
 import { Pricing } from "@/components/sections/pricing";
 import { FinalCta } from "@/components/sections/final-cta";
 import { Footer } from "@/components/sections/footer";
@@ -16,6 +17,7 @@ export default function Home() {
         <PainSolution />
         <Demo />
         <Benefits />
+        <Testimonials />
         <Pricing />
         <FinalCta />
       </main>
