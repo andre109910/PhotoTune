@@ -74,7 +74,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
           alt={afterImage.description}
           data-ai-hint={afterImage.imageHint}
           fill
-          className="object-contain"
+          className="object-cover"
           priority
         />
         <div className="absolute top-2 right-2 bg-black/50 text-white text-xs font-bold px-2 py-1 rounded-full">DEPOIS</div>
@@ -88,7 +88,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
           alt={beforeImage.description}
           data-ai-hint={beforeImage.imageHint}
           fill
-          className="object-contain"
+          className="object-cover"
           priority
         />
         <div className="absolute top-2 left-2 bg-black/50 text-white text-xs font-bold px-2 py-1 rounded-full">ANTES</div>
