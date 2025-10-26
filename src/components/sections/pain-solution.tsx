@@ -1,4 +1,4 @@
-import { Camera, Lightbulb, TrendingDown, Frown, XCircle, Smile, TrendingUp, Palette, Sun } from "lucide-react";
+import { Frown, Lightbulb, Palette, Sun } from "lucide-react";
 import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -50,15 +50,20 @@ export function PainSolution() {
             </div>
         </div>
 
-        <div className="mt-12">
-            <div className="border-l-4 border-blue-500 bg-blue-50/50 p-6 rounded-r-lg">
+        <div className="mt-16 text-center">
+          <h3 className="font-headline text-2xl font-bold text-title-blue">
+            Um estudo da Universidade de Oxford mostra que as pessoas <span className="text-primary">“comem com os olhos”</span>
+          </h3>
+        </div>
+        <div className="mt-4">
+            <div className="border-l-4 border-primary bg-primary/10 p-6 rounded-r-lg">
                 <p className="text-lg text-foreground italic">
-                  Um estudo da <strong className="font-semibold">Universidade de Oxford</strong> mostra que as pessoas <strong className="font-semibold">“comem com os olhos”</strong> — ou seja, a aparência do seu prato influencia diretamente na decisão de compra.
+                  ...ou seja, a aparência do seu prato <strong className="font-semibold">influencia diretamente</strong> na decisão de compra.
                 </p>
             </div>
         </div>
         
-        <div className="mt-12 bg-gradient-to-b from-blue-50 to-white p-8 rounded-2xl text-center">
+        <div className="mt-16 bg-gradient-to-b from-blue-50 to-white p-8 rounded-2xl text-center">
             <div className="flex items-center justify-center gap-4 mb-4">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
                 <Lightbulb className="h-6 w-6 text-primary" />
