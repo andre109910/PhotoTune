@@ -45,8 +45,8 @@ const packages = [
     features: ["Processamento com IA", "Alta qualidade", "Entrega rápida"],
     buttonText: "Quero transformar 5 fotos",
     href: "https://pay.cakto.com.br/32au8fd",
-    popular: true,
-    variant: 'popular' as const,
+    popular: false,
+    variant: 'default' as const,
   },
   {
     icon: PizzaSliceIcon,
@@ -58,8 +58,8 @@ const packages = [
     features: ["Processamento com IA", "Alta qualidade", "Entrega rápida"],
     buttonText: "Melhorar minhas 10 fotos",
     href: "https://pay.cakto.com.br/ivte3oq_622949",
-    popular: false,
-    variant: 'default' as const,
+    popular: true,
+    variant: 'popular' as const,
   },
 ];
 
