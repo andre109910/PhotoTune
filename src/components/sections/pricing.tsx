@@ -80,10 +80,10 @@ export function Pricing() {
           {packages.map((pkg, index) => (
             <Card 
                 key={index} 
-                className={`flex flex-col rounded-2xl shadow-lg transition-all text-center ${pkg.popular ? 'border-green-500 border-2 relative scale-105' : 'border-border'}`}
+                className={`flex flex-col rounded-2xl shadow-lg transition-all text-center ${pkg.popular ? 'border-green-400 border-2 relative scale-105' : 'border-border'}`}
             >
               {pkg.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-green-500 px-4 py-1.5 text-sm font-bold text-white">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-green-400 px-4 py-1.5 text-sm font-bold text-white">
                   <Star className="w-4 h-4 inline-block mr-1.5 fill-white" />
                   MAIS POPULAR
                 </div>
@@ -99,10 +99,10 @@ export function Pricing() {
               </CardHeader>
               <CardContent className="flex flex-1 flex-col items-center text-center px-6 pb-8">
                 {pkg.economy && <div className="text-green-600 font-semibold text-sm mb-2">{pkg.economy}</div>}
-                <div className="my-4">
+                <div className={`my-4 ${pkg.popular ? 'text-green-500' : 'text-primary'}`}>
                   <span className="text-4xl font-bold align-middle">R$</span>
                   <span className="text-7xl font-bold tracking-tighter">{pkg.price.split(',')[0]}</span>
-                  <span className="text-3xl font-bold text-muted-foreground align-top">,{pkg.price.split(',')[1]}</span>
+                  <span className="text-3xl font-bold align-top">,{pkg.price.split(',')[1]}</span>
                 </div>
                 {pkg.pricePerPhoto && <p className="text-muted-foreground -mt-2 mb-6">{pkg.pricePerPhoto}</p>}
 
@@ -116,7 +116,7 @@ export function Pricing() {
                 </ul>
 
                 <div className="w-full mt-auto">
-                  <Button size="lg" className={`w-full h-12 rounded-xl text-md font-bold ${pkg.popular ? 'bg-green-500 hover:bg-green-600' : 'bg-primary'}`} asChild>
+                  <Button size="lg" className={`w-full h-12 rounded-xl text-md font-bold ${pkg.popular ? 'bg-green-400 hover:bg-green-500' : 'bg-primary'}`} asChild>
                     <Link href={pkg.href} target="_blank">
                       {pkg.buttonText}
                     </Link>
