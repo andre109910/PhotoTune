@@ -3,7 +3,6 @@
 import React, { useState, useRef, useCallback, useEffect } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { cn } from "@/lib/utils";
 import type { ImagePlaceholder } from "@/lib/placeholder-images";
 
 interface BeforeAfterSliderProps {
@@ -15,18 +14,6 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
   const [sliderPosition, setSliderPosition] = useState(50);
   const [isDragging, setIsDragging] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const [containerWidth, setContainerWidth] = useState(0);
-
-  useEffect(() => {
-    const updateWidth = () => {
-      if (containerRef.current) {
-        setContainerWidth(containerRef.current.offsetWidth);
-      }
-    };
-    updateWidth();
-    window.addEventListener('resize', updateWidth);
-    return () => window.removeEventListener('resize', updateWidth);
-  }, []);
 
   const handleMove = useCallback((clientX: number) => {
     if (!containerRef.current) return;
@@ -36,60 +23,55 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
     setSliderPosition(percent);
   }, []);
 
-  const handleMouseDown = (e: React.MouseEvent) => {
+  const startDragging = (e: React.MouseEvent | React.TouchEvent) => {
     e.preventDefault();
     setIsDragging(true);
   };
   
-  const handleTouchStart = (e: React.TouchEvent) => {
-    setIsDragging(true);
-  };
-
-  const handleMouseUp = useCallback(() => {
-    setIsDragging(false);
-  }, []);
-
-  const handleMouseMove = useCallback((e: MouseEvent) => {
+  const stopDragging = useCallback(() => {
     if (isDragging) {
+      setIsDragging(false);
+    }
+  }, [isDragging]);
+
+  const onDrag = useCallback((e: MouseEvent | TouchEvent) => {
+    if (!isDragging) return;
+    if ('touches' in e) {
+      handleMove(e.touches[0].clientX);
+    } else {
       handleMove(e.clientX);
     }
   }, [isDragging, handleMove]);
 
-  const handleTouchMove = useCallback((e: TouchEvent) => {
-    if (isDragging) {
-      handleMove(e.touches[0].clientX);
-    }
-  }, [isDragging, handleMove]);
-
   useEffect(() => {
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseup", handleMouseUp);
-    window.addEventListener("touchmove", handleTouchMove);
-    window.addEventListener("touchend", handleMouseUp);
+    window.addEventListener("mousemove", onDrag);
+    window.addEventListener("touchmove", onDrag);
+    window.addEventListener("mouseup", stopDragging);
+    window.addEventListener("touchend", stopDragging);
 
     return () => {
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseup", handleMouseUp);
-      window.removeEventListener("touchmove", handleTouchMove);
-      window.removeEventListener("touchend", handleMouseUp);
+      window.removeEventListener("mousemove", onDrag);
+      window.removeEventListener("touchmove", onDrag);
+      window.removeEventListener("mouseup", stopDragging);
+      window.removeEventListener("touchend", stopDragging);
     };
-  }, [handleMouseMove, handleMouseUp, handleTouchMove]);
+  }, [onDrag, stopDragging]);
 
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-[900px] aspect-[3/2] mx-auto select-none overflow-hidden rounded-2xl shadow-2xl"
-      onMouseUp={handleMouseUp}
-      onTouchEnd={handleMouseUp}
+      className="relative w-full max-w-[900px] aspect-video mx-auto select-none overflow-hidden rounded-2xl shadow-2xl"
     >
-      <Image
-        src={afterImage.imageUrl}
-        alt={afterImage.description}
-        data-ai-hint={afterImage.imageHint}
-        fill
-        className="object-cover"
-        priority
-      />
+        <Image
+          src={afterImage.imageUrl}
+          alt={afterImage.description}
+          data-ai-hint={afterImage.imageHint}
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute top-2 right-2 bg-black/50 text-white text-xs font-bold px-2 py-1 rounded-full">DEPOIS</div>
+
       <div
         className="absolute top-0 left-0 h-full w-full overflow-hidden"
         style={{ clipPath: `inset(0 ${100 - sliderPosition}% 0 0)` }}
@@ -102,6 +84,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
           className="object-cover"
           priority
         />
+        <div className="absolute top-2 left-2 bg-black/50 text-white text-xs font-bold px-2 py-1 rounded-full">ANTES</div>
       </div>
 
       <div
@@ -109,13 +92,13 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
         style={{ left: `${sliderPosition}%`, transform: "translateX(-50%)" }}
       >
         <div
-          className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 h-12 w-12 rounded-full bg-primary shadow-lg flex items-center justify-center text-primary-foreground transition-transform hover:scale-110"
+          className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 h-10 w-10 rounded-full bg-primary shadow-lg flex items-center justify-center text-primary-foreground transition-transform hover:scale-110"
           style={{ touchAction: "none" }}
-          onMouseDown={handleMouseDown}
-          onTouchStart={handleTouchStart}
+          onMouseDown={startDragging}
+          onTouchStart={startDragging}
         >
-          <ChevronLeft className="h-6 w-6" />
-          <ChevronRight className="h-6 w-6" />
+          <ChevronLeft className="h-5 w-5" />
+          <ChevronRight className="h-5 w-5" />
         </div>
       </div>
     </div>

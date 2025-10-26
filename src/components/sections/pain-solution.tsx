@@ -1,8 +1,9 @@
 import { Camera, Lightbulb, TrendingDown, Frown } from "lucide-react";
+import Image from "next/image";
 
 export function PainSolution() {
   return (
-    <section id="solution" className="bg-gray-50/50 py-20 sm:py-24">
+    <section id="solution" className="bg-gray-50/50 py-20 sm:py-24 overflow-x-hidden">
       <div className="container mx-auto max-w-[900px] px-4">
         <div className="grid gap-12 md:grid-cols-2 md:gap-16">
           <div className="space-y-6">
@@ -23,8 +24,11 @@ export function PainSolution() {
                 <p><strong className="font-semibold">E o resultado? O cliente passa direto.</strong></p>
               </div>
             </div>
+             <div className="relative aspect-video w-full max-w-sm mx-auto">
+                 <Image src="https://i.imgur.com/qBMEdZ6.png" alt="Estatísticas de marketing visual" fill className="object-contain" />
+            </div>
             <p className="rounded-lg border border-l-4 border-accent bg-accent/20 p-4 text-base italic text-foreground">
-              Um estudo da Universidade de Harvard mostra que as pessoas “comem com os olhos” — ou seja, a aparência do seu prato influencia diretamente na decisão de compra.
+              Um estudo da Universidade de Oxford mostra que as pessoas “comem com os olhos” — ou seja, a aparência do seu prato influencia diretamente na decisão de compra.
             </p>
           </div>
 
