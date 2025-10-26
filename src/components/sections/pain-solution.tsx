@@ -1,57 +1,80 @@
-import { Camera, Lightbulb, TrendingDown, Frown } from "lucide-react";
+import { Camera, Lightbulb, TrendingDown, Frown, XCircle, Smile, TrendingUp } from "lucide-react";
 import Image from "next/image";
+import { Card, CardContent } from "@/components/ui/card";
+
+const problems = [
+    {
+      icon: (props: any) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 3v18h18"/></svg>,
+      text: "As cores parecem mortas...",
+      iconClass: "text-red-500",
+    },
+    {
+      icon: (props: any) => <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M12 12H5.5a8.5 8.5 0 1 0 8.28-11.42"/><path d="m15.5 6-3 3 3 3"/></svg>,
+      text: "A iluminação não valoriza o produto...",
+      iconClass: "text-orange-500",
+    },
+    {
+      icon: Frown,
+      text: "E o resultado? O cliente passa direto.",
+      iconClass: "text-yellow-500",
+    },
+  ];
+  
 
 export function PainSolution() {
   return (
     <section id="solution" className="bg-transparent py-20 sm:py-24 overflow-x-hidden">
       <div className="container mx-auto max-w-[900px] px-4">
-        <div className="grid gap-12 md:grid-cols-2 md:gap-16">
-          <div className="space-y-6">
+        <div className="text-center">
             <h2 className="font-headline text-3xl font-bold text-title-blue md:text-4xl">
               Você já percebeu que as fotos do seu cardápio não fazem jus ao sabor dos seus pratos?
             </h2>
-            <div className="space-y-4 text-lg text-foreground">
-              <div className="flex items-start gap-3">
-                <TrendingDown className="mt-1 h-6 w-6 shrink-0 text-destructive" />
-                <p><strong className="font-semibold">As cores parecem mortas...</strong></p>
-              </div>
-              <div className="flex items-start gap-3">
-                <Camera className="mt-1 h-6 w-6 shrink-0 text-muted-foreground" />
-                <p><strong className="font-semibold">A iluminação não valoriza o produto...</strong></p>
-              </div>
-              <div className="flex items-start gap-3">
-                <Frown className="mt-1 h-6 w-6 shrink-0 text-amber-500" />
-                <p><strong className="font-semibold">E o resultado? O cliente passa direto.</strong></p>
-              </div>
-            </div>
-            <div className="rounded-lg border border-l-4 border-accent bg-accent/20 p-4 text-base text-foreground">
-              <h4 className="font-bold mb-2 text-center">Um estudo da Universidade de Oxford mostra que as pessoas "comem com os olhos"</h4>
-              <div className="relative aspect-video w-full max-w-sm mx-auto mb-4">
-                  <Image src="https://i.imgur.com/qBMEdZ6.png" alt="Estatísticas de marketing visual" fill className="object-contain" />
-              </div>
-              <p className="italic text-center">
-                ou seja, a aparência do seu prato influencia diretamente na decisão de compra.
-              </p>
-            </div>
-          </div>
+        </div>
 
-          <div className="space-y-6">
-            <div className="flex items-center gap-4">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
+        <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+          {problems.map((problem, index) => (
+            <Card key={index} className="bg-white shadow-lg rounded-2xl border-none">
+              <CardContent className="flex flex-col items-center justify-center p-6 text-center">
+                <div className="mb-4">
+                    <problem.icon className={`h-10 w-10 ${problem.iconClass}`} />
+                </div>
+                <p className="text-muted-foreground">{problem.text}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="mt-12">
+            <div className="relative aspect-video w-full max-w-3xl mx-auto shadow-2xl rounded-2xl overflow-hidden">
+                <Image src="https://i.imgur.com/qBMEdZ6.png" alt="Estatísticas de marketing visual" fill className="object-contain" />
+            </div>
+        </div>
+
+        <div className="mt-12">
+            <div className="border-l-4 border-blue-500 bg-blue-50/50 p-6 rounded-r-lg">
+                <p className="text-lg text-foreground italic">
+                  Um estudo da <strong className="font-semibold">Universidade de Oxford</strong> mostra que as pessoas <strong className="font-semibold">“comem com os olhos”</strong> — ou seja, a aparência do seu prato influencia diretamente na decisão de compra.
+                </p>
+            </div>
+        </div>
+        
+        <div className="mt-12 bg-gradient-to-b from-blue-50 to-white p-8 rounded-2xl text-center">
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
                 <Lightbulb className="h-6 w-6 text-primary" />
               </div>
               <h3 className="font-headline text-3xl font-bold text-title-blue">
                 E é aí que entra o PhotoTune.
               </h3>
             </div>
-            <p className="text-lg leading-relaxed text-foreground">
+            <p className="text-lg leading-relaxed text-foreground max-w-3xl mx-auto">
               Com ele, você envia suas fotos “zoadaças” (sim, do jeito que estão!) e em poucos minutos recebe imagens otimizadas com IA — com cor, brilho, contraste e foco profissional.
             </p>
-            <p className="text-lg leading-relaxed text-foreground">
+            <p className="text-lg leading-relaxed text-foreground max-w-3xl mx-auto mt-4">
               Nada de fotógrafo caro ou programas complicados — o PhotoTune faz tudo automaticamente, com tecnologia de ponta.
             </p>
-          </div>
         </div>
+
       </div>
     </section>
   );
