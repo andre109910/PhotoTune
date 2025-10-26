@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Sparkles } from "lucide-react";
+import { Sparkles, CheckCircle2, WandSparkles } from "lucide-react";
 
 export function Hero() {
   return (
@@ -11,15 +11,30 @@ export function Hero() {
           Tecnologia de IA Profissional
         </Badge>
         <h1 className="font-headline text-4xl font-bold text-title-blue md:text-5xl lg:text-6xl">
-          Transforme fotos comuns em imagens <span className="text-primary underline decoration-wavy underline-offset-8">irresistíveis</span> com IA
+          Transforme fotos comuns em imagens <span className="text-primary underline underline-offset-8">irresistíveis</span> com IA
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-foreground md:text-xl">
-          Fotos ruins afastam clientes. O PhotoTune usa IA para transformar imagens sem graça em fotos profissionais, vibrantes e irresistíveis — prontas para atrair olhares e aumentar suas vendas!
+          Fotos ruins afastam clientes. O PhotoTune usa IA para transformar imagens sem graça em fotos profissionais, vibrantes e irresistíveis — prontas para atrair olhares e <span className="text-primary font-semibold">aumentar suas vendas!</span>
         </p>
         <div className="mt-10">
-          <Button size="lg" className="h-14 rounded-xl px-10 text-lg font-bold">
+          <Button size="lg" className="h-14 rounded-full px-10 text-lg font-bold">
+            <WandSparkles className="mr-2 h-5 w-5" />
             Quero transformar minhas fotos agora
           </Button>
+        </div>
+        <div className="mt-8 flex justify-center items-center gap-4 text-sm text-muted-foreground sm:gap-8">
+            <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-green-500" />
+                <span>Resultados em minutos</span>
+            </div>
+            <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-green-500" />
+                <span>100% automático</span>
+            </div>
+            <div className="flex items-center gap-2">
+                <CheckCircle2 className="h-4 w-4 text-green-500" />
+                <span>Qualidade profissional</span>
+            </div>
         </div>
       </div>
     </section>
