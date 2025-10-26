@@ -11,7 +11,7 @@ export function Hero() {
           Tecnologia de IA Profissional
         </Badge>
         <h1 className="font-headline text-4xl font-bold text-title-blue md:text-5xl lg:text-6xl">
-          Transforme fotos comuns em imagens <span className="text-primary underline underline-offset-8">irresistíveis</span> com IA
+          Transforme fotos comuns em imagens <span className="text-primary underline decoration-primary/70 underline-offset-8 decoration-4">irresistíveis</span> com IA
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-foreground md:text-xl">
           Fotos ruins afastam clientes. O PhotoTune usa IA para transformar imagens sem graça em fotos profissionais, vibrantes e irresistíveis — prontas para atrair olhares e <span className="text-primary font-semibold">aumentar suas vendas!</span>
