@@ -10,7 +10,7 @@ export function Testimonials() {
         <div className="mt-8 w-full mx-auto">
             <div className="relative aspect-[2/1] w-full overflow-hidden">
                 <Image
-                    src="https://i.imgur.com/bwR3Lg5.jpeg"
+                    src="https://i.imgur.com/bvu3h0f.jpeg"
                     alt="Depoimentos de clientes satisfeitos"
                     fill
                     className="object-contain rounded-md"
