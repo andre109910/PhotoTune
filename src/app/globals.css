@@ -78,6 +78,9 @@
   * {
     @apply border-border;
   }
+  html, body {
+    @apply overflow-x-hidden;
+  }
   body {
     @apply bg-gradient-to-b from-white to-blue-50 text-foreground;
   }
