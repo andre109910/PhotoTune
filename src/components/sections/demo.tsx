@@ -1,6 +1,5 @@
 import { BeforeAfterSlider } from "@/components/before-after-slider";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Card, CardContent } from "../ui/card";
 
 export function Demo() {
   const sliders = [
@@ -31,14 +30,12 @@ export function Demo() {
         <div className="mt-8 grid grid-cols-1 gap-8">
             {sliders.map((slide, index) => (
                 slide.before && slide.after && (
-                <Card key={index} className="overflow-hidden border-none shadow-2xl rounded-2xl">
-                    <CardContent className="p-0">
-                        <BeforeAfterSlider
-                            beforeImage={slide.before}
-                            afterImage={slide.after}
-                        />
-                    </CardContent>
-                </Card>
+                <div key={index} className="overflow-hidden rounded-2xl">
+                    <BeforeAfterSlider
+                        beforeImage={slide.before}
+                        afterImage={slide.after}
+                    />
+                </div>
                 )
             ))}
         </div>
