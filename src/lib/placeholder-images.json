@@ -1,3 +1,16 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "before-burger",
+      "description": "A dimly lit photo of a burger on a plate.",
+      "imageUrl": "https://images.unsplash.com/photo-1589828910786-1ca6da0c7682?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHxkdWxsJTIwZm9vZHxlbnwwfHx8fDE3NjE0OTEyMDN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "dull food"
+    },
+    {
+      "id": "after-burger",
+      "description": "A vibrant, professionally lit photo of a juicy burger on a plate.",
+      "imageUrl": "https://images.unsplash.com/photo-1563902209097-8b1acbd79526?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHx2aWJyYW50JTIwZm9vZHxlbnwwfHx8fDE3NjE0NzI2MzN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "vibrant food"
+    }
+  ]
 }

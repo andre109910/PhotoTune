@@ -1,3 +1,25 @@
+import { Hero } from "@/components/sections/hero";
+import { PainSolution } from "@/components/sections/pain-solution";
+import { Demo } from "@/components/sections/demo";
+import { Benefits } from "@/components/sections/benefits";
+import { Pricing } from "@/components/sections/pricing";
+import { FinalCta } from "@/components/sections/final-cta";
+import { Footer } from "@/components/sections/footer";
+import { UrgencyBanner } from "@/components/sections/urgency-banner";
+
 export default function Home() {
-  return <></>;
+  return (
+    <div className="flex flex-col min-h-screen">
+      <UrgencyBanner />
+      <main className="flex-1">
+        <Hero />
+        <PainSolution />
+        <Demo />
+        <Benefits />
+        <Pricing />
+        <FinalCta />
+      </main>
+      <Footer />
+    </div>
+  );
 }

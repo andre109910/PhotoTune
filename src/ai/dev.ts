@@ -1,1 +1,5 @@
-// Flows will be imported for their side effects in this file.
+import { config } from 'dotenv';
+config();
+
+import '@/ai/flows/enhance-uploaded-photos.ts';
+import '@/ai/flows/apply-artistic-styles.ts';
