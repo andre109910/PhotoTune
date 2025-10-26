@@ -23,8 +23,14 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
     setSliderPosition(percent);
   }, []);
 
+  const handleContainerClick = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (isDragging) return;
+    handleMove(e.clientX);
+  };
+  
   const startDragging = (e: React.MouseEvent | React.TouchEvent) => {
     e.preventDefault();
+    e.stopPropagation();
     setIsDragging(true);
   };
   
@@ -60,7 +66,8 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
   return (
     <div
       ref={containerRef}
-      className="relative w-full max-w-[900px] aspect-video mx-auto select-none overflow-hidden rounded-2xl shadow-2xl"
+      className="relative w-full max-w-[900px] aspect-video mx-auto select-none overflow-hidden rounded-2xl shadow-2xl cursor-pointer"
+      onClick={handleContainerClick}
     >
         <Image
           src={afterImage.imageUrl}
@@ -92,7 +99,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
         style={{ left: `${sliderPosition}%`, transform: "translateX(-50%)" }}
       >
         <div
-          className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 h-10 w-10 rounded-full bg-primary shadow-lg flex items-center justify-center text-primary-foreground transition-transform hover:scale-110"
+          className="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 h-10 w-10 rounded-full bg-primary shadow-lg flex items-center justify-center text-primary-foreground transition-transform hover:scale-110 cursor-ew-resize"
           style={{ touchAction: "none" }}
           onMouseDown={startDragging}
           onTouchStart={startDragging}
