@@ -45,7 +45,7 @@ export function PainSolution() {
         </div>
 
         <div className="mt-16 text-center">
-          <h3 className="font-headline text-2xl font-bold text-title-blue">
+          <h3 className="font-headline text-3xl font-bold text-title-blue md:text-4xl">
             Um estudo da Universidade de Oxford mostra que as pessoas <span className="text-primary">“comem com os olhos”</span>
           </h3>
         </div>
