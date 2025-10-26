@@ -99,10 +99,10 @@ export function Pricing() {
               </CardHeader>
               <CardContent className="flex flex-1 flex-col items-center text-center px-6 pb-8">
                 {pkg.economy && <div className="text-green-600 font-semibold text-sm mb-2">{pkg.economy}</div>}
-                <div className={`my-4 ${pkg.popular ? 'text-green-500' : 'text-primary'}`}>
-                  <span className="text-4xl font-bold align-middle">R$</span>
-                  <span className="text-7xl font-bold tracking-tighter">{pkg.price.split(',')[0]}</span>
-                  <span className="text-3xl font-bold align-top">,{pkg.price.split(',')[1]}</span>
+                <div className={`my-4 flex items-baseline justify-center font-bold ${pkg.popular ? 'text-green-500' : 'text-primary'}`}>
+                  <span className="text-3xl">R$</span>
+                  <span className="text-6xl tracking-tighter">{pkg.price.split(',')[0]}</span>
+                  <span className="text-2xl">,{pkg.price.split(',')[1]}</span>
                 </div>
                 {pkg.pricePerPhoto && <p className="text-muted-foreground -mt-2 mb-6">{pkg.pricePerPhoto}</p>}
 
