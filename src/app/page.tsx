@@ -10,7 +10,6 @@ import { UrgencyBanner } from "@/components/sections/urgency-banner";
 import { Evidence } from "@/components/sections/evidence";
 import { Guarantee } from "@/components/sections/guarantee";
 
-const SectionDivider = () => <div className="section-divider" />;
 
 export default function Home() {
   return (
@@ -18,21 +17,13 @@ export default function Home() {
       <UrgencyBanner />
       <main className="flex-1">
         <Hero />
-        <SectionDivider />
         <PainSolution />
-        <SectionDivider />
         <Evidence />
-        <SectionDivider />
         <Demo />
-        <SectionDivider />
         <Benefits />
-        <SectionDivider />
         <Testimonials />
-        <SectionDivider />
         <Pricing />
-        <SectionDivider />
         <Guarantee />
-        <SectionDivider />
         <FinalCta />
       </main>
       <Footer />
