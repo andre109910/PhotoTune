@@ -10,7 +10,7 @@ export function Hero() {
           <Sparkles className="mr-2 h-4 w-4" />
           Tecnologia de IA Profissional
         </Badge>
-        <h1 className="font-headline text-4xl font-bold text-title-blue md:text-5xl lg:text-6xl">
+        <h1 className="font-headline text-4xl font-bold text-title-brown md:text-5xl lg:text-6xl">
           Transforme fotos comuns em imagens <span className="text-primary underline decoration-primary/70 underline-offset-8 decoration-4">irresistíveis</span> com IA
         </h1>
         <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-foreground md:text-xl">

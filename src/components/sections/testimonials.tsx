@@ -4,7 +4,7 @@ export function Testimonials() {
   return (
     <section id="testimonials" className="py-20 sm:py-24">
       <div className="container mx-auto max-w-[900px] px-4 text-center">
-        <h2 className="font-headline text-3xl font-bold text-title-blue md:text-4xl">
+        <h2 className="font-headline text-3xl font-bold text-title-brown md:text-4xl">
           Pessoas que confiaram no nosso trabalho
         </h2>
         <div className="mt-8 w-full mx-auto">

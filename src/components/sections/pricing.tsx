@@ -71,7 +71,7 @@ export function Pricing() {
             <div className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
                 Ofertas e Pacotes
             </div>
-          <h2 className="font-headline text-3xl font-bold text-title-blue md:text-4xl mt-4">
+          <h2 className="font-headline text-3xl font-bold text-title-brown md:text-4xl mt-4">
             Escolha o pacote ideal pra você
           </h2>
           <p className="mt-2 text-muted-foreground">Todos os pacotes incluem processamento com IA de última geração</p>
@@ -80,7 +80,7 @@ export function Pricing() {
           {packages.map((pkg, index) => (
             <Card 
                 key={index} 
-                className={`flex flex-col rounded-2xl shadow-lg transition-all text-center ${pkg.popular ? 'border-green-400 border-2 relative scale-105' : 'border-border'}`}
+                className={`flex flex-col rounded-2xl shadow-lg transition-all text-center bg-white/60 backdrop-blur-sm ${pkg.popular ? 'border-green-400 border-2 relative scale-105' : 'border-border'}`}
             >
               {pkg.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-green-400 px-4 py-1.5 text-sm font-bold text-white">
@@ -92,7 +92,7 @@ export function Pricing() {
                 <div className={`flex h-16 w-16 items-center justify-center rounded-full mb-4 ${pkg.popular ? 'bg-green-100' : 'bg-primary/10'}`}>
                   <pkg.icon className={`h-8 w-8 ${pkg.popular ? 'text-green-500' : 'text-primary'}`} />
                 </div>
-                <CardTitle className="font-headline text-2xl font-bold text-title-blue">{pkg.title}</CardTitle>
+                <CardTitle className="font-headline text-2xl font-bold text-title-brown">{pkg.title}</CardTitle>
                 <CardDescription>
                     {pkg.description}
                 </CardDescription>

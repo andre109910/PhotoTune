@@ -6,7 +6,7 @@ export function Evidence() {
         <section id="evidence" className="py-20 sm:py-24">
             <div className="container mx-auto max-w-[900px] px-4">
                 <div className="text-center">
-                <h2 className="font-headline text-3xl font-bold text-title-blue md:text-4xl">
+                <h2 className="font-headline text-3xl font-bold text-title-brown md:text-4xl">
                     Um estudo da Universidade de Oxford mostra que as pessoas <span className="text-primary">“comem com os olhos”</span>
                 </h2>
                 </div>
@@ -18,19 +18,19 @@ export function Evidence() {
                 </div>
 
                 <div className="mt-8">
-                    <div className="bg-blue-100/60 border-l-4 border-blue-500 p-6 rounded-lg">
-                        <p className="text-lg text-blue-900 italic text-center">
+                    <div className="bg-orange-100/60 border-l-4 border-primary p-6 rounded-lg">
+                        <p className="text-lg text-orange-950 italic text-center">
                         ...ou seja, a aparência do seu prato <strong className="font-semibold">influencia diretamente</strong> na decisão de compra.
                         </p>
                     </div>
                 </div>
 
-                <div className="mt-16 bg-gradient-to-br from-blue-50 to-white p-8 rounded-2xl shadow-md border border-blue-100">
+                <div className="mt-16 bg-gradient-to-br from-orange-50 to-white p-8 rounded-2xl shadow-md border border-orange-100">
                     <div className="flex items-center justify-center gap-4 mb-4">
-                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-full bg-orange-100">
                             <Lightbulb className="h-6 w-6 text-primary" />
                         </div>
-                        <h3 className="font-headline text-3xl font-bold text-title-blue text-center">
+                        <h3 className="font-headline text-3xl font-bold text-title-brown text-center">
                             É aí que entra o PhotoTune.
                         </h3>
                     </div>

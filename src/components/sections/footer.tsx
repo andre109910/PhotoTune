@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="bg-title-blue text-primary-foreground/80 py-8">
+    <footer className="bg-title-brown text-primary-foreground/80 py-8">
       <div className="container mx-auto max-w-[900px] px-4 text-center">
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-8 text-sm">
           <span>📍 Serviço 100% digital</span>

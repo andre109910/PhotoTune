@@ -26,14 +26,14 @@ export function PainSolution() {
     <section id="solution" className="py-20 sm:py-24">
       <div className="container mx-auto max-w-[900px] px-4">
         <div className="text-center">
-            <h2 className="font-headline text-3xl font-bold text-title-blue md:text-4xl">
+            <h2 className="font-headline text-3xl font-bold text-title-brown md:text-4xl">
               Você já percebeu que as fotos do seu cardápio não fazem jus ao sabor dos seus pratos?
             </h2>
         </div>
 
         <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
           {problems.map((problem, index) => (
-            <Card key={index} className="bg-white shadow-lg rounded-2xl border-none">
+            <Card key={index} className="bg-white/80 shadow-lg rounded-2xl border-none backdrop-blur-sm">
               <CardContent className="flex flex-col items-center justify-center p-6 text-center">
                 <div className="mb-4">
                     <problem.icon className={`h-10 w-10 ${problem.iconClass}`} />

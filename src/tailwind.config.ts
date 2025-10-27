@@ -15,7 +15,7 @@ export default {
         code: ['monospace'],
       },
       colors: {
-        'title-blue': '#002244',
+        'title-brown': '#4C2B1A',
         'blue-50': '#EFF6FF',
         'blue-100': '#DBEAFE',
         background: 'hsl(var(--background))',

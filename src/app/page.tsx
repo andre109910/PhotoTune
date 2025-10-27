@@ -17,12 +17,12 @@ export default function Home() {
       <UrgencyBanner />
       <main className="flex-1">
         <div className="bg-background"><Hero /></div>
-        <div className="bg-blue-50/50"><PainSolution /></div>
+        <div className="bg-orange-50/30"><PainSolution /></div>
         <div className="bg-background"><Evidence /></div>
         <div className="bg-transparent"><Demo /></div>
-        <div className="bg-blue-50/50"><Benefits /></div>
+        <div className="bg-gradient-to-br from-orange-50 to-amber-100"><Benefits /></div>
         <div className="bg-background"><Testimonials /></div>
-        <div className="bg-blue-50/50"><Pricing /></div>
+        <div className="bg-orange-50/30"><Pricing /></div>
         <div className="bg-transparent"><Guarantee /></div>
         <div className="bg-background"><FinalCta /></div>
       </main>

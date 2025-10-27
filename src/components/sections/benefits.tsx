@@ -38,7 +38,7 @@ export function Benefits() {
     <section id="benefits" className="py-20 sm:py-24">
       <div className="container mx-auto max-w-[900px] px-4">
         <div className="text-center mb-12">
-            <h2 className="font-headline text-3xl font-bold text-title-blue md:text-4xl">
+            <h2 className="font-headline text-3xl font-bold text-title-brown md:text-4xl">
                 Benefícios diretos para o seu negócio
             </h2>
             <p className="text-lg text-muted-foreground mt-2">
@@ -50,7 +50,7 @@ export function Benefits() {
         
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           {benefits.map((benefit, index) => (
-            <Card key={index} className="bg-white shadow-lg rounded-2xl border-none">
+            <Card key={index} className="bg-white/80 shadow-lg rounded-2xl border-none backdrop-blur-sm">
                 <CardContent className="p-6">
                     <div className={`w-12 h-12 rounded-full flex items-center justify-center ${benefit.bgColor} mb-4`}>
                         <benefit.icon className={`h-6 w-6 ${benefit.iconColor}`} />
@@ -65,7 +65,7 @@ export function Benefits() {
           ))}
         </div>
         <div className="mt-12 text-center">
-            <div className="inline-block bg-blue-100/80 text-blue-800 rounded-xl px-6 py-4">
+            <div className="inline-block bg-orange-100/80 text-orange-900 rounded-xl px-6 py-4">
                 <p className="font-medium">A <strong className="font-bold">primeira impressão</strong> é a que fica. Garanta que seja <strong className="font-bold">inesquecível!</strong></p>
             </div>
         </div>
