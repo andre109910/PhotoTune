@@ -30,7 +30,7 @@ export function Demo() {
         <div className="mt-8 grid grid-cols-1 gap-8">
             {sliders.map((slide, index) => (
                 slide.before && slide.after && (
-                <div key={index} className="overflow-hidden rounded-2xl">
+                <div key={index}>
                     <BeforeAfterSlider
                         beforeImage={slide.before}
                         afterImage={slide.after}
