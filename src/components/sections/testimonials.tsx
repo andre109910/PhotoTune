@@ -8,7 +8,7 @@ export function Testimonials() {
           Pessoas que confiaram no nosso trabalho
         </h2>
         <div className="mt-8 w-full mx-auto">
-            <div className="relative aspect-video w-full max-w-5xl mx-auto overflow-hidden">
+            <div className="relative aspect-[1/2] md:aspect-video w-full max-w-5xl mx-auto overflow-hidden">
                 <Image
                     src="https://i.imgur.com/bvu3h0f.jpeg"
                     alt="Depoimentos de clientes satisfeitos"
