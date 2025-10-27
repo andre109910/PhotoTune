@@ -77,7 +77,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
           className="object-cover"
           priority
         />
-        <div className="absolute top-2 right-2 bg-black/50 text-white text-xs font-bold px-2 py-1 rounded-full">DEPOIS</div>
+        <div className="absolute top-2 right-2 bg-black/50 text-white text-sm font-bold px-3 py-1.5 rounded-full">DEPOIS</div>
 
       <div
         className="absolute top-0 left-0 h-full w-full overflow-hidden"
@@ -91,7 +91,7 @@ export function BeforeAfterSlider({ beforeImage, afterImage }: BeforeAfterSlider
           className="object-cover"
           priority
         />
-        <div className="absolute top-2 left-2 bg-black/50 text-white text-xs font-bold px-2 py-1 rounded-full">ANTES</div>
+        <div className="absolute top-2 left-2 bg-black/50 text-white text-sm font-bold px-3 py-1.5 rounded-full">ANTES</div>
       </div>
 
       <div
