@@ -3,7 +3,7 @@ import { Lightbulb } from "lucide-react";
 
 export function Evidence() {
     return (
-        <section id="evidence" className="bg-background py-20 sm:py-24">
+        <section id="evidence" className="py-20 sm:py-24">
             <div className="container mx-auto max-w-[900px] px-4">
                 <div className="text-center">
                 <h2 className="font-headline text-3xl font-bold text-title-blue md:text-4xl">

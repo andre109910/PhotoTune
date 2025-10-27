@@ -16,15 +16,15 @@ export default function Home() {
     <div className="flex flex-col min-h-screen">
       <UrgencyBanner />
       <main className="flex-1">
-        <Hero />
-        <PainSolution />
-        <Evidence />
-        <Demo />
-        <Benefits />
-        <Testimonials />
-        <Pricing />
-        <Guarantee />
-        <FinalCta />
+        <div className="bg-background"><Hero /></div>
+        <div className="bg-blue-50/50"><PainSolution /></div>
+        <div className="bg-background"><Evidence /></div>
+        <div className="bg-transparent"><Demo /></div>
+        <div className="bg-blue-50/50"><Benefits /></div>
+        <div className="bg-background"><Testimonials /></div>
+        <div className="bg-blue-50/50"><Pricing /></div>
+        <div className="bg-transparent"><Guarantee /></div>
+        <div className="bg-background"><FinalCta /></div>
       </main>
       <Footer />
     </div>

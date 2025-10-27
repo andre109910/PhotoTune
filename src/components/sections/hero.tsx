@@ -4,7 +4,7 @@ import { Sparkles, CheckCircle2, WandSparkles } from "lucide-react";
 
 export function Hero() {
   return (
-    <section id="hero" className="bg-background py-20 sm:py-28">
+    <section id="hero" className="py-20 sm:py-28">
       <div className="container mx-auto max-w-[900px] px-4 text-center">
         <Badge variant="outline" className="mb-4 border-primary/30 bg-primary/10 py-2 px-4 text-sm font-bold text-primary">
           <Sparkles className="mr-2 h-4 w-4" />

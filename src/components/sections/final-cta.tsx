@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 
 export function FinalCta() {
   return (
-    <section id="final-cta" className="bg-background py-20 sm:py-24">
+    <section id="final-cta" className="py-20 sm:py-24">
       <div className="container mx-auto max-w-[900px] px-4 text-center">
         <h2 className="font-headline text-3xl font-bold text-title-blue md:text-4xl">
           🎯 Clique abaixo e envie suas fotos agora mesmo!

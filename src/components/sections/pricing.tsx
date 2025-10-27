@@ -65,7 +65,7 @@ const packages = [
 
 export function Pricing() {
   return (
-    <section id="pricing" className="bg-background py-20 sm:py-24">
+    <section id="pricing" className="py-20 sm:py-24">
       <div className="container mx-auto max-w-[1100px] px-4">
         <div className="text-center">
             <div className="inline-block rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">
