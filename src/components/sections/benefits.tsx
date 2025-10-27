@@ -1,5 +1,6 @@
 import { CheckCircle2, Heart, Sparkles, Tag, User } from "lucide-react";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
+import { AnimatedStats } from "@/components/animated-stats";
 
 const benefits = [
   {
@@ -44,6 +45,9 @@ export function Benefits() {
                 Transforme visualizações em vendas
             </p>
         </div>
+        
+        <AnimatedStats target={20} />
+        
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           {benefits.map((benefit, index) => (
             <Card key={index} className="bg-white shadow-lg rounded-2xl border-none">
