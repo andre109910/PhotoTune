@@ -82,7 +82,7 @@
     @apply overflow-x-hidden;
   }
   body {
-    @apply bg-gradient-to-b from-white to-blue-50 text-foreground;
+    @apply bg-background text-foreground;
   }
 }
 

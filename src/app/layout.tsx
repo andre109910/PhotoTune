@@ -3,6 +3,7 @@ import { Poppins, PT_Sans } from 'next/font/google';
 import './globals.css';
 import { Toaster } from "@/components/ui/toaster";
 import Script from 'next/script';
+import { AuroraBackground } from '@/components/ui/aurora-background';
 
 export const metadata: Metadata = {
   title: 'PhotoTune AI | Transforme suas fotos de cardápio com IA',
@@ -56,7 +57,9 @@ export default function RootLayout({
         {/* End Meta Pixel Code */}
       </head>
       <body className={`font-body antialiased ${poppins.variable} ${ptSans.variable}`}>
-        {children}
+        <AuroraBackground>
+          {children}
+        </AuroraBackground>
         <Toaster />
       </body>
     </html>
