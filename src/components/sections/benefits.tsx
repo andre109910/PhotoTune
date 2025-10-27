@@ -46,7 +46,7 @@ export function Benefits() {
             </p>
         </div>
         
-        <AnimatedStats target={20} />
+        <AnimatedStats target={25} />
         
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
           {benefits.map((benefit, index) => (
