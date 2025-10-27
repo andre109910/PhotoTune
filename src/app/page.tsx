@@ -8,6 +8,7 @@ import { FinalCta } from "@/components/sections/final-cta";
 import { Footer } from "@/components/sections/footer";
 import { UrgencyBanner } from "@/components/sections/urgency-banner";
 import { Evidence } from "@/components/sections/evidence";
+import { Guarantee } from "@/components/sections/guarantee";
 
 const SectionDivider = () => <div className="section-divider" />;
 
@@ -29,6 +30,8 @@ export default function Home() {
         <Testimonials />
         <SectionDivider />
         <Pricing />
+        <SectionDivider />
+        <Guarantee />
         <SectionDivider />
         <FinalCta />
       </main>
