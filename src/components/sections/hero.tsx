@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Sparkles, CheckCircle2, WandSparkles } from "lucide-react";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -17,9 +18,11 @@ export function Hero() {
           Fotos ruins afastam clientes. O PhotoTune usa IA para transformar imagens sem graça em fotos profissionais, vibrantes e irresistíveis — prontas para atrair olhares e <span className="text-primary font-semibold">aumentar suas vendas!</span>
         </p>
         <div className="mt-10">
-          <Button size="lg" className="h-auto rounded-full px-8 py-3 text-base font-bold sm:h-14 sm:px-10 sm:text-lg">
-            <WandSparkles className="mr-2 h-5 w-5" />
-            Quero transformar minhas fotos agora
+          <Button size="lg" className="h-auto rounded-full px-8 py-3 text-base font-bold sm:h-14 sm:px-10 sm:text-lg" asChild>
+            <Link href="#pricing">
+              <WandSparkles className="mr-2 h-5 w-5" />
+              Quero transformar minhas fotos agora
+            </Link>
           </Button>
         </div>
         <div className="mt-8 flex flex-col items-center justify-center gap-4 text-sm text-muted-foreground sm:flex-row sm:gap-8">

@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export function FinalCta() {
   return (
@@ -11,8 +12,10 @@ export function FinalCta() {
           🧠 Em minutos, você vai ver como uma boa imagem muda tudo.
         </p>
         <div className="mt-10">
-          <Button size="lg" className="h-auto rounded-xl px-6 py-4 text-lg font-bold transform transition-transform duration-300 hover:scale-105 sm:h-16 sm:px-12 sm:text-xl">
-            Quero transformar minhas fotos com IA agora
+          <Button size="lg" className="h-auto rounded-xl px-6 py-4 text-lg font-bold transform transition-transform duration-300 hover:scale-105 sm:h-16 sm:px-12 sm:text-xl" asChild>
+            <Link href="#pricing">
+              Quero transformar minhas fotos com IA agora
+            </Link>
           </Button>
         </div>
       </div>
